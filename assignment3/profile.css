@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #111111;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(103, 182, 209, 0.25), transparent 26%),
+        radial-gradient(circle at 84% 72%, rgba(166, 116, 255, 0.22), transparent 30%),
+        linear-gradient(135deg, #f7f5ef, #e9eef3);
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.profile-card {
+    position: relative;
+    width: 425px;
+    min-height: 678px;
+    border-radius: 32px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 28px 45px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.cover {
+    position: relative;
+    height: 255px;
+    border-radius: 32px 32px 36px 36px;
+    background:
+        linear-gradient(rgba(226, 238, 240, 0.45), rgba(226, 238, 240, 0.45)),
+        url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmb8-N1w-hRVRcKMawJz2g9hJ9NL0GbTRcqg&s")
+        center bottom / cover no-repeat;
+}
+
+.add-button {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    width: 60px;
+    height: 60px;
+    border: 0;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #111111;
+    font-size: 38px;
+    line-height: 1;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.avatar {
+    width: 126px;
+    height: 126px;
+    margin-top: -65px;
+    border: 7px solid #ffffff;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+h1 {
+    margin-top: 34px;
+    font-size: 31px;
+    line-height: 1.2;
+}
+
+.bio {
+    width: 300px;
+    margin: 22px auto 0;
+    color: #777777;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.stats {
+    width: 362px;
+    margin: 32px auto 0;
+    padding: 34px 26px 25px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ededed;
+    border-radius: 26px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.stats strong {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 22px;
+}
+
+.stats span {
+    color: #777777;
+    font-size: 17px;
+}
+
+.socials {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    line-height: 1;
+}
+
+.instagram-icon,
+.threads-icon {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+}
+
+.instagram-icon {
+    border: 3px solid #111111;
+    border-radius: 9px;
+}
+
+.instagram-icon::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 3px solid #111111;
+    border-radius: 50%;
+}
+
+.instagram-icon::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #111111;
+}
+
+.x-icon {
+    color: #111111;
+    font-size: 34px;
+    font-weight: 400;
+}
+
+.threads-icon {
+    border: 3px solid #111111;
+    border-radius: 50%;
+}
+
+.threads-icon::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 8px;
+    width: 10px;
+    height: 10px;
+    border: 3px solid #111111;
+    border-radius: 50%;
+}
+
+.threads-icon::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 13px;
+    width: 11px;
+    height: 18px;
+    border-top: 3px solid #111111;
+    border-right: 3px solid #111111;
+    border-radius: 50%;
+}
+
+@media (max-width: 520px) {
+    .profile-card {
+        width: 100%;
+    }
+
+    .stats {
+        width: calc(100% - 52px);
+    }
+}
