@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 150px);
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 10px;
+            background: #eef6ff;
+            border-radius: 12px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #4fb9af;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        /* Defining the layout structure */
+        .item-1 { grid-column: span 1; grid-row: span 1; }
+        .item-2 { grid-column: span 1; grid-row: span 2; background: #008b8b; }
+        .item-3 { grid-column: span 2; grid-row: span 1; background: #006868; }
+        .item-6 { grid-column: span 2; grid-row: span 2; background: #328282; }
+        /* Items 4, 5, 7, 8, 9, 10, 11 default to 1x1 */
+    </style>
+</head>
+<body>
+
+<div class="grid-container">
+    <div class="item item-1">1</div>
+    <div class="item item-2">2</div>
+    <div class="item item-3">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item item-6">6</div>
+    <div class="item">7</div>
+    <div class="item">8</div>
+    <div class="item">9</div>
+    <div class="item">10</div>
+    <div class="item">11</div>
+</div>
+
+</body>
+</html>

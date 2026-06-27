@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template</title>
+    <style>
+        .main-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 300px 100px;
+            gap: 10px;
+            padding: 10px;
+            background-color: #d3c4b6;
+
+            grid-template-areas:
+                "header header header"
+                "navigation content sidebar"
+                "footer footer footer";
+        }
+        .box {
+            background-color: lightgray;
+            border: 1px solid #6b0f0f;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .header {
+            grid-area: header;
+            background-color: #af3a3a; 
+            border: 1px solid #ff4d4d;
+        }
+        .navigation {
+            grid-area: navigation;
+            background-color: #578dc3; 
+            border: 1px solid #3399ff;
+        }
+        .content {
+            grid-area: content;
+            background-color: #99ff99; 
+            border: 1px solid #33cc33;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #75a4d6; 
+            border: 1px solid #cccc33;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: #4c79c5; 
+            border: 1px solid #5b91c4;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="box header">Header</div>
+        <div class="box Navigation">Navigation</div>
+        <div class="box Content">Content</div>
+        <div class="box Side bar">Side Bar</div>
+        <div class="box footer">Footer</div>
+    </div>
+</body>
+</html>
