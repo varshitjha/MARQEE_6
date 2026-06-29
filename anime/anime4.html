@@ -1,0 +1,42 @@
+<style>
+  /* Basic styling for layout */
+  .container { max-width: 800px; margin: auto; font-family: sans-serif; }
+  
+  /* Navbar styling */
+  .navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+  .nav-links a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; }
+
+  /* Hero section */
+  .hero { display: flex; align-items: center; justify-content: space-between; border: 1px solid #ddd; padding: 20px; border-radius: 8px; margin-top: 20px; }
+  
+  /* Responsive stacking for smaller screens */
+  @media (max-width: 600px) {
+    .hero { flex-direction: column; text-align: center; }
+    .hero > div { width: 100%; padding: 0; }
+  }
+</style>
+
+<div class="container">
+  <nav class="navbar">
+    <div style="font-size: 1.5rem; font-weight: bold;">MyBrand</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div style="flex: 1; padding-right: 20px;">
+      <h1>Learn Responsive Web Design</h1>
+      <p style="color: #555;">Build websites that work beautifully on every device.</p>
+      <button style="background-color: #4a90e2; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer;">
+        Get Started
+      </button>
+    </div>
+    <div style="flex: 1;">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQUxIKfXJAk9wMjNowg7TWf8dtUDPFzDWpo8gr_LWrbA&s=10" alt="Responsive Design" style="width: 100%; height: auto; border-radius: 8px; display: block;">
+    </div>
+  </div>
+</div>

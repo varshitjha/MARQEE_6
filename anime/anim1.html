@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: yellow;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            
+            align-items: center;
+/* 
+            transition-property:background-color;
+            transition-duration: 3s;
+            transition-timing-function: ease;
+            transition-delay: 0s; */
+
+            /* short hand */
+            transition:
+             background-color 2s ease 1s;
+             border-radius: 2s ease 2s;
+
+        }
+        .box:hover{
+            border-radius: 50%;
+            background-color:rgb(255, 115, 0) ;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="box" box1>1</div>
+    </div>
+</body>
+</html>
