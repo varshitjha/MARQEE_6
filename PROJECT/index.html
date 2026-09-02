@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A small browser-based Mario-style jumping game." />
+    <title>Mario Jump</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game" aria-label="Mario Jump game">
+      <header class="hud">
+        <p class="score" aria-live="polite">Score: <span id="score">0</span></p>
+        <button id="restart-button" type="button">Restart</button>
+      </header>
+
+      <section id="game-area" class="game-area" aria-label="Game area" tabindex="0">
+        <div id="mario" class="mario" aria-label="Mario character">M</div>
+        <div id="pipe" class="pipe" aria-hidden="true"></div>
+        <p id="game-message" class="game-message">Press Space, ↑, or tap to jump</p>
+        <div class="ground" aria-hidden="true"></div>
+      </section>
+
+      <p class="instructions">Jump with Space, ↑, W, or a tap. Move with ← / → or A / D.</p>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

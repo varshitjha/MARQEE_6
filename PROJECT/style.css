@@ -1,0 +1,132 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #111827;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.game {
+  width: min(960px, 100%);
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: .75rem;
+}
+
+.score { margin: 0; font-size: clamp(1.1rem, 3vw, 1.5rem); font-weight: 700; }
+
+button {
+  border: 0;
+  border-radius: .5rem;
+  padding: .65rem 1rem;
+  color: #fff;
+  background: #dc2626;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover, button:focus-visible { background: #b91c1c; }
+
+.game-area {
+  position: relative;
+  height: min(65vh, 520px);
+  min-height: 320px;
+  overflow: hidden;
+  border: 5px solid #fff;
+  border-radius: 1rem;
+  outline: none;
+  background: linear-gradient(#38bdf8 0 72%, #86efac 72%);
+}
+
+.game-area:focus-visible { outline: 3px solid #facc15; outline-offset: 3px; }
+
+.mario {
+  position: absolute;
+  z-index: 2;
+  bottom: 46px;
+  left: 8%;
+  width: 52px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border: 4px solid #7f1d1d;
+  border-radius: 50% 50% 20% 20%;
+  background: #ef4444;
+  color: #fff;
+  font-weight: 900;
+  user-select: none;
+}
+
+.mario.flipped { transform: scaleX(-1); }
+
+.pipe {
+  position: absolute;
+  z-index: 1;
+  bottom: 38px;
+  left: 100%;
+  width: 70px;
+  height: 105px;
+  border: 5px solid #14532d;
+  border-radius: .4rem .4rem 0 0;
+  background: repeating-linear-gradient(90deg, #22c55e 0 14px, #16a34a 14px 28px);
+}
+
+.pipe::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: -11px;
+  width: 82px;
+  height: 22px;
+  border: 5px solid #14532d;
+  border-radius: .35rem;
+  background: #22c55e;
+}
+
+.ground {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 42px;
+  background: repeating-linear-gradient(90deg, #a16207 0 24px, #ca8a04 24px 48px);
+}
+
+.game-message {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  z-index: 3;
+  width: max-content;
+  max-width: 90%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+  padding: .65rem 1rem;
+  border-radius: .5rem;
+  background: rgb(17 24 39 / 80%);
+  text-align: center;
+  font-weight: 700;
+}
+
+.game-message[hidden] { display: none; }
+.instructions { margin: .75rem 0 0; text-align: center; color: #d1d5db; }
+
+@media (max-width: 480px) {
+  .game-area { min-height: 280px; }
+  .mario { left: 6%; width: 45px; height: 55px; }
+  .pipe { width: 58px; height: 92px; }
+}
